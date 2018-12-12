@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout
+    xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <com.github.mikephil.charting.charts.PieChart
+        android:id="@+id/pieChart"
+        android:layout_width="match_parent"
+        android:layout_height="436dp"
+        android:layout_alignParentBottom="true"
+        android:layout_alignParentStart="true"
+        android:layout_marginBottom="12dp"
+        android:layout_alignParentLeft="true">
+
+    </com.github.mikephil.charting.charts.PieChart>
+
+    <ImageButton
+        android:id="@+id/attackButton"
+        android:layout_width="41dp"
+        android:layout_height="41dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="11dp"
+        android:layout_marginLeft="11dp"
+        android:layout_marginTop="11dp"
+        android:contentDescription="Add Attack Card"
+        app:srcCompat="@drawable/attack_button_sm" />
+
+    <ImageButton
+        android:id="@+id/skillButton"
+        android:layout_width="41dp"
+        android:layout_height="41dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="50dp"
+        android:layout_marginLeft="11dp"
+        android:layout_marginTop="11dp"
+        android:contentDescription="Add Skill Card"
+        app:srcCompat="@drawable/skill_button_sm" />
+
+    <ImageButton
+        android:id="@+id/powerButton"
+        android:layout_width="41dp"
+        android:layout_height="41dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="89dp"
+        android:layout_marginLeft="11dp"
+        android:layout_marginTop="11dp"
+        android:contentDescription="Add Power Card"
+        app:srcCompat="@drawable/power_button_sm" />
+
+    <ImageButton
+        android:id="@+id/colorlessButton"
+        android:layout_width="41dp"
+        android:layout_height="41dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="128dp"
+        android:layout_marginLeft="11dp"
+        android:layout_marginTop="11dp"
+        android:contentDescription="Add Colorless Card"
+        app:srcCompat="@drawable/colorless_button_sm" />
+
+    <ImageButton
+        android:id="@+id/curseButton"
+        android:layout_width="41dp"
+        android:layout_height="41dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="168dp"
+        android:layout_marginLeft="11dp"
+        android:layout_marginTop="11dp"
+        android:contentDescription="Add Curse Card"
+        app:srcCompat="@drawable/curse_sm" />
+
+    <com.mciad.astralcompass.ToggleImageButton
+        android:id="@+id/addRemoveButton"
+        android:layout_width="41dp"
+        android:layout_height="41dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="228dp"
+        android:layout_marginLeft="11dp"
+        android:layout_marginTop="11dp"
+        android:contentDescription="Toggle Remove Card"
+        app:srcCompat="@drawable/plus_button_sm" />
+
+    <com.mciad.astralcompass.ToggleImageButton
+        android:id="@+id/vulnerableButton"
+        android:layout_width="41dp"
+        android:layout_height="41dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="11dp"
+        android:layout_marginLeft="11dp"
+        android:layout_marginTop="67dp"
+        android:contentDescription="card applies vulnerable"
+        app:srcCompat="@drawable/vulnerable" />
+
+    <com.mciad.astralcompass.ToggleImageButton
+        android:id="@+id/weakButton"
+        android:layout_width="41dp"
+        android:layout_height="41dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="50dp"
+        android:layout_marginLeft="11dp"
+        android:layout_marginTop="67dp"
+        android:contentDescription="card applies weak"
+        app:srcCompat="@drawable/weak" />
+
+    <com.mciad.astralcompass.ToggleImageButton
+        android:id="@+id/blockButton"
+        android:layout_width="41dp"
+        android:layout_height="41dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="89dp"
+        android:layout_marginLeft="11dp"
+        android:layout_marginTop="67dp"
+        android:contentDescription="card applies block"
+        app:srcCompat="@drawable/block_sm" />
+
+    <com.mciad.astralcompass.ToggleImageButton
+        android:id="@+id/drawButton"
+        android:layout_width="41dp"
+        android:layout_height="41dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="128dp"
+        android:layout_marginLeft="11dp"
+        android:layout_marginTop="67dp"
+        android:contentDescription="card causes draw"
+        app:srcCompat="@drawable/draw" />
+
+    <com.mciad.astralcompass.ToggleImageButton
+        android:id="@+id/exhaustButton"
+        android:layout_width="41dp"
+        android:layout_height="41dp"
+        android:layout_alignParentStart="true"
+        android:layout_alignParentLeft="true"
+        android:layout_alignParentTop="true"
+        android:layout_marginStart="168dp"
+        android:layout_marginLeft="11dp"
+        android:layout_marginTop="67dp"
+        android:contentDescription="card exhausts itself or other cards"
+        app:srcCompat="@drawable/exhaust" />
+
+</RelativeLayout>
