@@ -7,4 +7,6 @@ public enum CardTrait {
     DRAW,
     EXHAUST,
     CHANNEL,
+    DISCARD,
+    EVOKE,
 }

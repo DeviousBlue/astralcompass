@@ -19,8 +19,8 @@ public class Card {
     }
 
     public Card(CardType ct){
-        type = ct;
         traits = new ArrayList<>();
+        type = ct;
     }
 
     public CardType getType() {
@@ -31,7 +31,7 @@ public class Card {
         return traits;
     }
 
-    private void addTrait(CardTrait trait){
+    public void addTrait(CardTrait trait){
         traits.add(trait);
     }
 
