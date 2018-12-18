@@ -18,6 +18,7 @@ import java.util.List;
 public class GraphFragment extends Fragment {
 
     private SpirePie pie;
+    private Deck deck;
 
     private ImageButton attackButton;
     private ImageButton skillButton;
@@ -44,10 +45,9 @@ public class GraphFragment extends Fragment {
         activity = ((GraphActivity)getActivity());
         setupButtons();
 
-        pie = new SpirePie(view.getContext(), (PieChart) view.findViewById(R.id.pieChart));
-        pie.setCharacter(activity.hero);
+        deck = new Deck(activity.hero);
+        pie = new SpirePie(view.getContext(), (PieChart) view.findViewById(R.id.pieChart), deck);
         pie.redraw();
-
 
         return view;
     }
@@ -72,9 +72,9 @@ public class GraphFragment extends Fragment {
             public void onClick (View v){
                 //update card counts
                 if(toggleAddButton.isOn()) {
-                    pie.addAttack();
+                    deck.addAttack();
                 }else {
-                    pie.removeAttack();
+                    deck.removeAttack();
                 }
 
                 clearTraitButtons();
@@ -87,9 +87,9 @@ public class GraphFragment extends Fragment {
             public void onClick (View v){
                 //update card counts
                 if(toggleAddButton.isOn()) {
-                    pie.addSkill();
+                    deck.addSkill();
                 }else{
-                    pie.removeSkill();
+                    deck.removeSkill();
                 }
 
                 clearTraitButtons();
@@ -102,9 +102,9 @@ public class GraphFragment extends Fragment {
             public void onClick (View v){
                 //update card counts
                 if(toggleAddButton.isOn()){
-                    pie.addPower();
+                    deck.addPower();
                 }else{
-                    pie.removePower();
+                    deck.removePower();
                 }
 
                 clearTraitButtons();
@@ -118,9 +118,9 @@ public class GraphFragment extends Fragment {
                 //update card counts
 
                 if(toggleAddButton.isOn()){
-                    pie.addColorless();
+                    deck.addColorless();
                 }else{
-                    pie.removeColorless();
+                    deck.removeColorless();
                 }
 
                 clearTraitButtons();
@@ -134,9 +134,9 @@ public class GraphFragment extends Fragment {
                 //update card counts
 
                 if(toggleAddButton.isOn()){
-                    pie.addCurse();
+                    deck.addCurse();
                 }else{
-                    pie.removeCurse();
+                    deck.removeCurse();
                 }
 
                 clearTraitButtons();

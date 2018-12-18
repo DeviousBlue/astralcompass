@@ -23,7 +23,7 @@ public class SpireStatePagerAdapter extends FragmentStatePagerAdapter {
 
     @Override
     public Fragment getItem(int i) {
-        if(i<fragList.size()){
+        if(i<fragList.size() && i>0){
             return fragList.get(i);
         }else{
             return fragList.get(0);

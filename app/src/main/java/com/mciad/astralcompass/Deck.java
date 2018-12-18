@@ -13,9 +13,11 @@ public class Deck {
     private Hero hero;
 
     public Deck(Hero h){
+        typeCount = new HashMap<CardType, Integer>();
+        traitCount = new HashMap<CardTrait, Integer>();
         cards = new ArrayList<>();
         hero = h;
-        setupDefaultCards(hero);
+        setupDefaultCards();
     }
 
     public void addCard(CardType type){
@@ -73,8 +75,61 @@ public class Deck {
                 break;
             }
         }
-
     }
+
+    public void removeCard(CardType type){
+        removeCard(new Card(type));
+    }
+
+    /**
+     * Several convenience methods for quickly
+     * performing common card management actions
+     */
+
+    public void addAttack(){
+        addCard(CardType.ATTACK);
+    }
+
+    public void addPower(){
+        addCard(CardType.POWER);
+    }
+
+    public void addSkill(){
+        addCard(CardType.SKILL);
+    }
+
+    public void addColorless(){
+        addCard(CardType.COLORLESS);
+    }
+
+    public void addCurse() {
+        addCard(CardType.CURSE);
+    }
+
+    public void removeAttack(){
+        removeCard(CardType.ATTACK);
+    }
+
+    public void removePower(){
+        removeCard(CardType.POWER);
+    }
+
+    public void removeSkill(){
+        removeCard(CardType.SKILL);
+    }
+
+    public void removeColorless(){
+        removeCard(CardType.COLORLESS);
+    }
+
+    public void removeCurse(){
+        removeCard(CardType.CURSE);
+    }
+
+    public Hero hero(){
+        return hero;
+    }
+
 
     /** Get the number of cards in this deck
      * @return card count as an int
@@ -133,9 +188,8 @@ public class Deck {
 
     /** Create all default cards for a given hero and
      * set all initial card and trait counts to starting values
-     * @param myHero - target hero/character
      */
-    private void setupDefaultCards(Hero myHero){
+    private void setupDefaultCards(){
         traitCount = new HashMap<>();
         for(CardTrait ct : CardTrait.values())
             traitCount.put(ct, 0);
@@ -144,7 +198,7 @@ public class Deck {
         for(CardType ct : CardType.values())
             typeCount.put(ct, 0);
 
-        switch (myHero){
+        switch (hero){
             case IRONCLAD:
                 setDefaultIronCladCards();
                 break;
