@@ -16,6 +16,7 @@ public class Card {
     public Card(CardType ct, CardTrait trait){
         traits = new ArrayList<>();
         traits.add(trait);
+        type = ct;
     }
 
     public Card(CardType ct){
